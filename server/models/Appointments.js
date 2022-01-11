@@ -16,6 +16,9 @@ const AppointmentSchema = new mongoose.Schema({
     appointmentSlot:{
         type:String,
         required:true
+    },
+    isCompleted:{
+        default:false
     }
 })
 

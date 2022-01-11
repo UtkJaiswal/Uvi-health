@@ -27,6 +27,14 @@ app.post('/addAppointment', async (req,res)=>{
     res.json(appointment)
 })
 
+app.put('/editAppointment/:id', async (req,res)=>{
+    const editedAppointment = req.body
+    const appointment = await AppointmentModel.findByIdAndUpdate(req.params.id,{$set:editedAppointment,new:true});
+    res.json(appointment)
+
+    
+})
+
 app.listen(3001,()=>{
     console.log("Server connected successfully")
 })
