@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Appointment Schema
 const AppointmentSchema = new mongoose.Schema({
     appointmentName:{
         type:String,
@@ -22,6 +23,7 @@ const AppointmentSchema = new mongoose.Schema({
     }
 })
 
+//Appointment model
 const AppointmentModel = mongoose.model("appointments",AppointmentSchema)
-
+//Exporting model so that it can be used in the files
 module.exports = AppointmentModel
